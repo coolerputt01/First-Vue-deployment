@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <title>Vue App</title>
+    <style>
+      body{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+        height:100vh;
+        background-color:#f6f5f0;
+      }
+      button{
+        width:56vw;
+        height:6.3vh;
+        border:none;
+        outline:none;
+        border-radius:5px;
+        font-size:1.2em;
+        font-weight: bold;
+        box-shadow:1px 2px 1px 0px grey;
+        background-color:#ab00F0;
+        color: #f6f5f0;
+      }
+      #app{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+      }
+      .base-info{
+        font-size:2.5em;
+        font-weight: bold;
+        padding:18px;
+      }
+      .vue-logo{
+        object-fit:cover;
+        width:50%;
+        height:30%;
+        mix-blend-mode:multiply;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_deIvlAbuj9e5YZyjll8lkkrnfWVBJW3hnAUCh9jxHA&s" alt="Vue Logo" class="vue-logo">
+<div id="app">
+  <p class="base-info">Click to increase</p>
+  <button @click="count++">{{ count }}</button>
+</div>
+<script type="module">
+  import { createApp , ref} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+  const app = createApp({
+    data(){
+      return {count:0}
+    }
+  });
+  app.mount('#app');
+  
+</script>
+  </body>
+
+</html>
